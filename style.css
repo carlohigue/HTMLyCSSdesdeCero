@@ -1,0 +1,69 @@
+*{
+    margin: 0;
+    padding: 0;
+    gap: 0;
+}
+
+
+body{
+    background-color: rgb(206, 133, 133);
+}
+
+
+.contenedor{
+    background-color: rgb(253, 231, 231);
+    height: 90vh;
+    margin: 5vh 10vw 0 10vw;
+}
+
+.cabecera{
+    text-align: center;
+    border-style:dashed;
+    border-color: brown;
+    margin: 1vh 1vw 1vh 1vw;
+    position: relative;
+    top:2vh;
+}
+
+.contiene-cuadros{
+    display: grid;
+    grid-template-areas:
+    "grid-cuadro1 grid-cuadro2";
+}
+
+.cuadros-contenidos{
+    border-style: dashed;
+    border-color: brown;
+    width: 37.5vw;
+    height: 76vh;
+    margin: 3vh 1vw 1vh 1vw;
+}
+
+.cuadro1{
+    grid-area: grid-cuadro1;
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Gl%C3%BChwendel_brennt_durch.jpg/800px-Gl%C3%BChwendel_brennt_durch.jpg);
+}
+
+#texto-cuadro1{
+    color: antiquewhite;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+}
+
+.imagen-cuadro1{
+    width: 30vw;
+    display: flex;
+    margin: auto;
+}
+
+.cuadro2{
+    grid-area:  grid-cuadro2;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+}
+
+.texto-cuadro2{
+    margin: 20px;
+}

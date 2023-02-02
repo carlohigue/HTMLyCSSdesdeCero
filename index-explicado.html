@@ -1,0 +1,112 @@
+<!-- Los conceptos más importantes han sido colocados en mayúsculas en su primera mención, a modo de indicar lo-  -->
+<!-- imperante de comprenderlos lo más a fondo posible, así tener un aprendizaje más facil y mejor desempeño. -->
+
+<!-- La estructura de una página en HTML está construida por ELEMENTOS, llamados tambien cajas o bloques. -->
+<!-- Cada elemento tiene una ETIQUETA de apertura y de cierre, o para algunos solo una de estas dos. -->
+
+<!-- No es necesario conocer todas las etiquetas, una busqueda en google muestra si existe alguna para lo que necesitas. -->
+
+<!-- Es una BUENA PRÁCTICA usar la etiqueta correcta para facilitar que los motores de búsqueda puedan comprender- -->
+<!-- el contenido de tu página con facilidad y darte mayor relevancia en las búsquedas, pero no es imperante- -->
+<!-- para construir una página funcional usando solo HTML, CSS y JS. -->
+
+<!-- Se comprende por buena práctica el consenso de normas de orden y estilo en un código de modo que sea más seguro- -->
+<!-- y facil de procesar por un computador, otros programadores o el mismo que se encuentra escribiendo el código- -->
+<!-- pues simplifica el trabajo, la lectura y la organización. -->
+
+<!-- Las páginas creadas con HTML, CSS y JavaScript nada más se conocen como páginas estáticas. -->
+<!-- Javascript no tiene nada que ver con Java; el primero funciona en navegadores, el segundo en casi lo que sea. -->
+
+<!-- Dentro de las etiquetas se pueden añadir ATRIBUTOS como "class", "id", "href", "src", "alt"... -->
+<!-- Estos atributos son necesarios o utiles según la naturaleza de la etiqueta y el objetivo del elemento. -->
+<!-- EJ1:  <div class="rojo" id="cuadro-rojo"></div>, acá ID y class son atributos que añado para referenciar a este- -->
+<!-- elemento en mi CSS o JS pues lo deseo manipular usando estos mismos. En la stylesheet se aprecia su uso. -->
+<!-- EJ2: <img src="foto-de-perro.jpg" alt="Perro corriendo">, src="..." es un atributo que define para la etiqueta- -->
+<!-- de donde tomará la imagen a mostrar, y alt="..." es una breve descripción de la imagen.  -->
+<!-- Los atributos especiales son atributos nativos de una etiqueta, que no pueden ser usandos en todas. -->
+<!-- No se puede utilizar src="" o href="" en un <div> por ejemplo, causará problemas en su uso, y es una mala práctica. -->
+
+<!-- Existen dos tipos de etiquetas, que serán utilizadas en este documento: DE LINEA y DE BLOQUE. -->
+<!-- Esta naturaleza puede ser cambiada en CSS con "display:...", mas detalles en la hoja de estilo "style.css". -->
+<!-- Por default las etiquetas de Bloque (div, main, aside...) se usan para contener otros elementos y ordenar VISTAS. -->
+<!-- Las etiquetas de Linea (span, strong, code) se usa para contener texto pues siguen el flujo lógico del mismo. -->
+
+<!-- Una vista es, pues, lo que se logra visualizar en el ordenador. -->
+
+<!DOCTYPE html>
+<!-- Llamamos DOCUMENTO al conjunto de código y software maquetado(HTML, CSS) y lógico (JS) que componen a una página. -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina de jose</title>
+    <link rel="stylesheet" href="style-explicado.css">
+<!-- con el <link> vinculas el documento a otros archivos necesarios para tu página -->
+</head>
+<!-- En el "head" incluimos toda la información que necesitamos que la página tenga precargada para mostrar su contenido. -->
+<!-- Por ejemplo importaciones de archivos, de fuentes, instrucciones para el navegador, FRAMEWORKS o LIBRERIAS a usar. -->
+
+<!-- Recomendamos buscar las definiciones de Framework y Librería, así como diferencias entre estas. No obligatorio. -->
+
+<body>
+<!-- En el <body> se encuentra todo lo que compondrá el cuerpo de nuestra página. -->
+
+    <div class="contenedor">
+<!-- Los elementos <div> son bloques sin atributos especiales. Son elementos tipo bloque, pues su etiqueta es de bloque. -->
+
+        <h1 class="cabecera">
+            Esta es mi pagina con solo Divs y Spans
+        </h1>
+<!-- <h1>(h1-h6) son etiquetas de bloque especiales pata títulos, subtitulos y sus subtipos. -->
+
+        <div class="contiene-cuadros">
+            <div class="cuadros-contenidos cuadro1">
+
+                <h2 id="texto-cuadro1">
+                    Imagen(HTML) con Imagen de fondo(CSS)
+                </h2>
+<!-- Acá se usa el atributo id="..." para demostrar como referenciar al mismo en CSS. Detalles en la hoja de estilo. -->
+
+                <img class="imagen-cuadro1" src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Merops_apiaster_04.jpg" alt="">
+<!-- <img> es la etiqueta para incluir imagenes en tu pagina, usa el atributo src="" para buscar la ruta de la imagen-->
+<!-- El atributo alt="..." corresponde a una breve descripcion de la imagen. -->
+<!-- <img> es un ejemplo de una etiqueta de solo apertura sin cierre, o cierre sin apertura. -->
+
+            </div>
+            <div class="cuadros-contenidos cuadro2">
+<!-- Como se muestra en esta etiqueta, puedes añadir más de una class o id a un elemento. -->
+
+                <span class="texto-cuadro2">
+                    <strong>
+                        Lorem ipsum dolor sit amet consecteturadipisicing elit.
+                    </strong>
+                <br>
+                <br>
+                    Cumque, consectetur optio? Voluptatibus, delectus necessitatibus. Nobis atque odio animi qui minima ducimus harum? Provident, iure rerum aspernatur ipsam magni animi qui.
+                </span>
+<!-- En esta sección de código podemos ver el uso de <span> y <strong>, etiquetas de linea usadas solo para texto. -->
+<!-- El elemento <span> carece de atributos o caracteristicas especiales. -->
+<!-- Este elemento <strong> por default coloca en negrita el texto que se encuentre dentro. -->
+<!-- <br> es una etiqueta solo de apertura que ocasiona un salto de línea. Es buena práctica evitar su uso siempre- -->
+<!-- que puedas lograr lo deseado usando CSS. No cumple con las buenas prácticas en este ejemplo. -->
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<!-- Se recomienda buscar las palabras que colocamos en mayúsculas como "[PALABRA] HTML" para información util adicional. -->
+
+<!-- Puede consultarse la documentación oficial MDN de HTML en caso de necesitar más detalles:  -->
+<!-- https://developer.mozilla.org/en-US/docs/Web/HTML  -->
+
+<!-- Tips de atajos: -->
+<!-- Con 'Ctrl + }' puedes comentar/descomentar lo que tengas seleccionado, o crear un comentario si no seleccionas nada -->
+<!-- Con  'Ctrl + space' puedes ver las sugerencias de autollenado que te da el navegador-->
+
+<!-- Si te interesa un desafío que te hará más facil HTML y el maquetado, aprende los atajos de EMMET: -->
+<!-- Comandos de EMMET: https://docs.emmet.io/cheat-sheet/ -->
+<!-- Ejercios con EMMET: https://gist.github.com/kewinMarchand/8ad7eccb49260177057cf22fcbde92e5 -->

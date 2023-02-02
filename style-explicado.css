@@ -1,0 +1,116 @@
+/* El archivo .css corresponde al estilo de página, que es el documento que vemos ahora. */
+/* CSS es un LENGUAJE DE DISEÑO GRÁFICO, que afectará el HTML, LENGUAJE DE MARCADO */
+
+/* En este archivo indicamos nuestros SELECTORES */
+/* Los selectores permiten cambiar atributos de estilo de los elementos del documento. */
+/* Los selectores se colocan en la etiqueta principal del elemento, pueden ser "class" o "ID" */
+
+*{
+/* El asterisco nos permite crear un selector que afecte a todos los elementos. */
+
+    margin: 0;
+    padding: 0;
+    gap: 0;
+/* Con esto nos deshacemos de todos los margenes y espaciados internos que traen naturalmente las etiquetas. */
+/* Margin, padding y gap son los espaciadores de cuadros naturales. */
+
+}
+
+
+body{
+/* Se puede seleccionar un elemento sin su clase o ID, usando el nombre de su etiqueta como vemos que se ha hecho */
+
+    background-color: rgb(206, 133, 133);
+}
+
+
+.contenedor{
+/* Cuando seleccionamos un cuadro por su clase siempre iniciamos con un '.' | EJ: ".contenedor". */
+
+    background-color: rgb(253, 231, 231);
+    height: 90vh;
+/* Usamos 'vh' (viewheigt) y 'vw' (viewwidth) dado que dependen del dispositivo donde se esté visualizano, de la vista */
+/* Existen alternativas de medición, como px, in, cm, em, rem...   pueden apreciarse en el siguiente link: */
+/* https://developer.mozilla.org/es/docs/Learn/CSS/Building_blocks/Values_and_units#n%C3%BAmeros_longitudes_y_porcentajes */
+
+    margin: 5vh 10vw 0 10vw;
+}
+
+.cabecera{
+    text-align: center;
+    border-style:dashed;
+    border-color: brown;
+    margin: 1vh 1vw 1vh 1vw;
+    position: relative;
+    top:2vh;
+    /* El "position: relative" nos permite activar la traslación de objetos, que resulta solo visual. */
+    /* Con esto trasladamos "2vh" el cuadro seleccionado DESDE top, su parte de arriba. */
+    /* Que sea solo visual implica que no altera el orden de lectura de los elementos del documento, pues- */
+    /* El maquetado de HTML siempre se lee en el mismo sentido que esté escrito. */
+
+}
+
+.contiene-cuadros{
+    display: grid;
+/* Para poder utilizar un CSSGRID indicamos que este cuadro tendrá una vista del tipo cuadrilla, como hemos indicado. */
+
+    grid-template-areas:
+    "grid-cuadro1 grid-cuadro2";
+/* Ya definido que será un Grid, creamos una plantilla con el espacio que cubrirá cada elemento de nuestro cuadro. */
+/* Puede verse que estarán uno inmediato al otro como si "[cuadro1] [Cuadro2]" se tratara de un plano que los ordena.*/
+/* Normalmente si el grid no se cumple, dado que los grid-area no estén bien definidos en los- */
+/* elementos que son hijos inmediatos, solo no se logra ver o se verá desordenado*/
+
+/* Hijos Inmediatos se refiere al los elementos anidados directamente en un elemento en el HTML. */
+/* Ej: <div><span>...</span><strong>...</strong></div> | span y strong son hijos inmediatos de div en este caso. */
+}
+
+.cuadros-contenidos{
+    border-style: dashed;
+    border-color: brown;
+    width: 37.5vw;
+    height: 76vh;
+    margin: 3vh 1vw 1vh 1vw;
+    /* Acá tuvimos que colocar el primer valor de 'margin', el de top, con '3vh' debido a que está trasladandose- */
+    /* desde arriba '2vh' porque le añadimos "position: relative; top: 2vh", deseamos que quede con '1vh' de margen. */
+}
+
+.cuadro1{
+    grid-area: grid-cuadro1;
+/* Con 'grid-area' definimos donde se va a ubicar este elemento en su grid padre, que definimos previamente */
+
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Gl%C3%BChwendel_brennt_durch.jpg/800px-Gl%C3%BChwendel_brennt_durch.jpg);
+/* Este es un ejemplo del uso de un 'Background-image' */
+}
+
+#texto-cuadro1{
+    color: antiquewhite;
+/* Con esto cambiamos el color de la fuente de letra. */
+
+    font-family: 'Courier New', Courier, monospace;
+/* Con esto cambiamos el tipo de la fuente de letra. */
+
+    text-align: center;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+}
+
+.imagen-cuadro1{
+    width: 30vw;
+    display: flex;
+    margin: auto;
+/* "margin: auto" centra los elementos que contenga un cuadro con "display:flex"*/
+}
+
+.cuadro2{
+    grid-area:  grid-cuadro2;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+}
+
+.texto-cuadro2{
+    margin: 20px;
+}
+
+/* Puede consultarse la documentación oficial MDN de CSS en caso de necesitar más detalles: */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS */
