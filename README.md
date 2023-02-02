@@ -1,3 +1,3 @@
 # HTMLyCSSdesdeCero
 ***
-Se recomienda leer esto y editarlo desde VSCode, de ser posible utilizar LiveServer para crear la página estática.
+Se recomienda descargar y editar este repositorio desde VSCode, de ser posible utilizar LiveServer para crear la página estática y que se actualice en tiempo real.
